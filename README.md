@@ -1,60 +1,50 @@
 # Bootcamp Observabilité & Data – Décembre 2025
 
-# Ce dépôt regroupe mes exercices pratiques et mini-projets réalisés pendant mes congés (27 décembre → 4 janvier) afin de monter rapidement en compétences sur les outils Data & Observabilité utilisés dans des environnements DevOps modernes.
+Ce dépôt regroupe mes exercices pratiques et mini-projets réalisés pendant mes congés (27 décembre → 4 janvier) afin de monter rapidement en compétences sur les outils Data & Observabilité utilisés dans des environnements DevOps modernes.
 
-# Objectifs
+## 🎯 Objectifs
 
-# Renforcer mes compétences sur les outils demandés dans l’offre DevOps – InfoHub
+- Renforcer mes compétences sur les outils demandés dans l'offre DevOps – InfoHub
+- Construire un portfolio concret : dashboards, pipelines, notebooks et rapports
+- Documenter chaque étape pour démontrer ma capacité d'apprentissage rapide et autonome
 
-# Construire un portfolio concret : dashboards, pipelines, notebooks et rapports
+## 🧰 Technologies & Contenu
 
-# Documenter chaque étape pour démontrer ma capacité d’apprentissage rapide et autonome
+### 📊 Datadog
 
-# 🧰 Technologies & Contenu
+- Dashboards de monitoring
+- Alertes
+- Traces distribuées (APM)
 
-# 📊 Datadog
+### ☁️ Azure Data Factory
 
-# Dashboards de monitoring
+- Pipelines ETL
+- Validation et contrôle de la qualité des données
 
-# Alertes
+### 🔥 Databricks
 
-# Traces distribuées (APM)
+- Transformations Spark
+- Initiation au Machine Learning
 
-# ☁️ Azure Data Factory
+### 🧵 Microsoft Fabric
 
-# Pipelines ETL
+- Lakehouse
+- Modélisation et rapports Power BI
 
-# Validation et contrôle de la qualité des données
+## 🧩 Synthèse
 
-# 🔥 Databricks
+- Slides de restitution
+- Journal de formation et retours d'expérience
 
-# Transformations Spark
+## 📦 Livrables
 
-# Initiation au Machine Learning
+Chaque dossier contient :
 
-# 🧵 Microsoft Fabric
+- 📸 Captures d'écran
+- 📜 Scripts / Notebooks
+- 📝 Notes explicatives et choix techniques
 
-# Lakehouse
+## 👤 Auteur
 
-# Modélisation et rapports Power BI
-
-# 🧩 Synthèse
-
-# Slides de restitution
-
-# Journal de formation et retours d’expérience
-
-# 📦 Livrables
-
-# Chaque dossier contient :
-
-# 📸 Captures d’écran
-
-# 📜 Scripts / Notebooks
-
-# 📝 Notes explicatives et choix techniques
-
-# 👤 Auteur
-
-# Juvet
-# DevOps Engineer – Mercedes-Benz Trucks Molsheim
+**Juvet**  
+DevOps Engineer – Mercedes-Benz Trucks Molsheim
