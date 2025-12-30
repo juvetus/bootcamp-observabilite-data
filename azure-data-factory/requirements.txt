@@ -1,0 +1,4 @@
+datadog
+python-dotenv
+requests
+

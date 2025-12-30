@@ -1,0 +1,54 @@
+services:
+  # Agent Datadog
+  dd-agent:
+    image: gcr.io/datadoghq/agent:7
+    container_name: dd-agent-adf
+    environment:
+      - DD_API_KEY=${DD_API_KEY}
+      - DD_SITE=${DD_SITE:-datadoghq.eu}
+      - DD_HOSTNAME=docker-host
+      - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
+      - DD_APM_ENABLED=true
+      - DD_APM_NON_LOCAL_TRAFFIC=true
+      - DD_LOGS_ENABLED=true
+      - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
+    networks:
+      - pipeline-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "agent", "health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # Pipeline ETL
+  adf-pipeline:
+    build: .
+    container_name: adf-pipeline
+    environment:
+      - DD_AGENT_HOST=dd-agent
+      - DD_STATSD_PORT=8125
+      - DD_API_KEY=${DD_API_KEY}
+      - DD_SITE=${DD_SITE:-datadoghq.eu}
+      - DD_HOSTNAME=docker-pipeline
+      - PIPELINE_NAME=${PIPELINE_NAME:-docker-adf-pipeline}
+      - ENV=${ENV:-dev}
+      - SIMULATE_ERROR=${SIMULATE_ERROR:-false}
+      - ERROR_TYPE=${ERROR_TYPE:-processing}
+    volumes:
+      - ./data/output:/app/data/output
+      - ./logs:/app/logs
+    depends_on:
+      dd-agent:
+        condition: service_healthy
+    networks:
+      - pipeline-network
+
+networks:
+  pipeline-network:
+    driver: bridge
