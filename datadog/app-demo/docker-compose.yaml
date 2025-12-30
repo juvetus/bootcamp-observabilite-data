@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  flask-apm:
+    build: .
+    container_name: flask-apm
+    ports:
+      - "5000:5000"
+    networks:
+      - datadog-net
+
+networks:
+  datadog-net:
+    external: true
