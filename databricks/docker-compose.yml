@@ -1,0 +1,14 @@
+services:
+  spark-job:
+    build: .
+    container_name: databricks-spark-job
+    volumes:
+      - ./output:/app/output
+      - ./data/input:/app/data/input
+      - ./data/output:/app/data/output
+    environment:
+      - SPARK_LOCAL_DIRS=/tmp/spark
+      - DD_API_KEY=b9aeda243419af4396e5f7fb40273c78
+      - DD_AGENT_HOST=host.docker.internal
+      - DD_DOGSTATSD_PORT=8125
+      - ENV=dev

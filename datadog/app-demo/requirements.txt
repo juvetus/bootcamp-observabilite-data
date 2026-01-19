@@ -1,5 +1,7 @@
-flask
-ddtrace>=1.17.0
-psutil
+flask==3.0.0
+ddtrace==2.5.0
+datadog==0.49.1
+psutil==5.9.6
+requests==2.31.0
 
 
