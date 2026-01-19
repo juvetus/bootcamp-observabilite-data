@@ -95,15 +95,6 @@ Maîtriser l'**observabilité des pipelines de données** avec Datadog à traver
 
 ##  Synthèse Globale
 
-### Vue d'ensemble
-
-| Projet | Focus | Métriques | Format | Volume |
-|--------|-------|-----------|--------|--------|
-| **Datadog** | Monitoring infra & app | 6+ custom | HTTP/JSON | N/A |
-| **Fabric** | Pipeline medallion | 14 custom | Parquet | ~1K records |
-| **Databricks** | Traitement distribué | 9 custom | Parquet | ~10K records |
-| **ADF** | ETL orchestré | 20 custom | CSV | 60 records |
-
 ### Statistiques du Bootcamp
 
 -  **4 projets** complets et documentés
